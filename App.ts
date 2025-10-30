@@ -61,3 +61,5 @@
 // }
 
 //Tuples in typescript
+
+let employee = [123,'john',2000,true]
