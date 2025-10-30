@@ -80,7 +80,6 @@
 // // arr = [100,'hello',true,null,undefined];
 // // Union Types in Typescript
 // /*let user: {name: string; age: number} | null = null;
-
 // function getUser(){
 //     const uname = 'john';
 //     const uage = 30;
@@ -88,16 +87,55 @@
 //     return user;
 // }
 // console.log(getUser());*/
-// function printStatus(message, statusCode) {
-//     if (typeof statusCode === 'string') {
-//         console.log("".concat(message, " Status : ").concat(statusCode.trim()));
-//     }
-//     else {
-//         console.log("".concat(message, " Status : ").concat(statusCode));
-//     }
+// function printStatus(message: string, statusCode: number | string | boolean){
+//     if(typeof statusCode === 'string'){
+//         console.log(`${message} Status : ${statusCode.trim()}`);
+//     }else{console.log(`${message} Status : ${statusCode}`);}
 // }
 // printStatus('Success', 200);
 // printStatus('Error', '500 Internal Server Error');
-// printStatus('Success', ' 200');
-// printStatus('Success', true);
+// printStatus('Success',' 200');
+// printStatus('Success',true);
 // // printStatus('Not Found', true); // This will give an error
+/////////////////Literal Types in Typescript//////////////
+var str = 'Hello World';
+var str2 = 'Anything';
+//Without literal types this function would accept any string value
+// function roleMessage(role: string){
+//     switch(role){
+//         case 'admin':
+//             console.log('You are an admin user');
+//             break;
+//         case 'read-only':
+//             console.log('You are a read-only user');
+//             break;
+//         case 'read-write':
+//             console.log('You are a read-write user');
+//             break;
+//             default:
+//                 console.log('Invalid role');
+//     }
+// }
+// roleMessage('admin');
+// roleMessage('read-only');
+// roleMessage('read-write');
+// roleMessage('super-admin'); // This will give the default case message
+function roleMessage(role) {
+    switch (role) {
+        case 'admin':
+            console.log('You are an admin user');
+            break;
+        case 'read-only':
+            console.log('You are a read-only user');
+            break;
+        case 'read-write':
+            console.log('You are a read-write user');
+            break;
+        default:
+            console.log('Invalid role');
+    }
+}
+roleMessage('admin');
+roleMessage('read-only');
+roleMessage('read-write');
+// roleMessage('super-admin'); // This will throw an error now

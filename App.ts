@@ -116,3 +116,54 @@
 // printStatus('Success',' 200');
 // printStatus('Success',true);
 // // printStatus('Not Found', true); // This will give an error
+
+/////////////////Literal Types in Typescript//////////////
+const str = 'Hello World' ;
+let str2 ='Anything' ;
+
+//Without literal types this function would accept any string value
+
+// function roleMessage(role: string){
+//     switch(role){
+//         case 'admin':
+//             console.log('You are an admin user');
+//             break;
+//         case 'read-only':
+//             console.log('You are a read-only user');
+//             break;
+//         case 'read-write':
+//             console.log('You are a read-write user');
+//             break;
+//             default:
+//                 console.log('Invalid role');
+//     }
+// }
+
+
+// roleMessage('admin');
+// roleMessage('read-only');
+// roleMessage('read-write');
+// roleMessage('super-admin'); // This will give the default case message
+
+
+function roleMessage(role: 'admin' | 'read-only' | 'read-write'){
+    switch(role){
+        case 'admin':
+            console.log('You are an admin user');
+            break;
+        case 'read-only':
+            console.log('You are a read-only user');
+            break;
+        case 'read-write':
+            console.log('You are a read-write user');
+            break;
+            default:
+                console.log('Invalid role');
+    }
+}
+
+
+roleMessage('admin');
+roleMessage('read-only');
+roleMessage('read-write');
+// roleMessage('super-admin'); // This will throw an error now
