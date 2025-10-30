@@ -33,9 +33,20 @@
 // // console.log(sum(12,13));
 // console.log(sum(n1,n2,false));
 //Object type in typescript
-var person = {
-    name: 'John',
-    age: 30
-};
-console.log(person.name);
-console.log(person["age"]);
+// let person = {
+//     name: 'John',
+//     age: 30
+// }
+// console.log(person.name);
+// console.log(person["age"]);
+//Arrays In Typescript
+var person = ['john', 28, 'male', 1000];
+var names = [];
+var birthyear = [1998, 1989, 2007];
+names.push('john');
+// console.log(names[0]);
+// console.log(birthyear[0]);
+for (var _i = 0, birthyear_1 = birthyear; _i < birthyear_1.length; _i++) {
+    var i = birthyear_1[_i];
+    console.log(i);
+}

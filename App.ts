@@ -40,9 +40,24 @@
 // console.log(sum(n1,n2,false));
 
 //Object type in typescript
-let person = {
-    name: 'John',
-    age: 30
-}
-console.log(person.name);
-console.log(person["age"]);
+// let person = {
+//     name: 'John',
+//     age: 30
+// }
+// console.log(person.name);
+// console.log(person["age"]);
+//Arrays In Typescript
+// let person: (string | number)[] = ['john',28,'male',1000];
+// let names: string[]= [];
+// let birthyear: number[] = [1998,1989,2007];
+
+// names.push('john');
+
+// // console.log(names[0]);
+// // console.log(birthyear[0]);
+
+// for(let i of birthyear){
+//     console.log(i);
+// }
+
+//Tuples in typescript
