@@ -224,12 +224,15 @@ function add(num1 : number, num2: number){
 
 addNumbers = sum;
 addNumbers = add; // This will give an error
-*/
-function calculate(num1, num2, print) {
-    var result = num1 + num2;
+
+
+function calculate(num1: number, num2: number, print: (str:string, n: number) => void){
+    const result = num1 + num2;
     print('The result is:', result);
 }
-function display(msg, value) {
+function display(msg: string, value: number){
     console.log(msg, value);
 }
+
 calculate(10, 20, display);
+*/ 
